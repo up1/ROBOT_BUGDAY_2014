@@ -6,10 +6,26 @@ ${LOGIN URL}    http://localhost:7272/html
 
 *** Testcases ***
 Login success naja
-	Open Browser    ${LOGIN URL}
-	Input Text      username_field    demo
-	Input Text      password_field    mode
-	Click Button    LOGIN
-	Wait Until Page Contains    Welcome Page
+	login url
+	ใส่ username
+	ใส่ password
+	กดปุ่ม login
+	ต้องเห็น Welcome page
+
 
 *** Keywords ***
+login url
+	Open Browser    ${LOGIN URL}
+
+ใส่ username
+	Input Text    username_field    demo
+
+ใส่ password
+	Input Text    password_field    mode
+
+กดปุ่ม login
+	Click Button   LOGIN
+
+ต้องเห็น Welcome page
+	Wait Until Page Contains    Welcome Page
+
