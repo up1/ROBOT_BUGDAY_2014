@@ -1,0 +1,15 @@
+*** Settings ***
+Library    Selenium2Library
+
+*** Variables ***
+${LOGIN URL}    http://localhost:7272/html
+
+*** Testcases ***
+Login success
+	Open Browser    ${LOGIN URL}
+	Input Text      username_field    demo
+	Input Text      password_field    mode
+	Click Button    LOGIN
+	Wait Until Page Contains    Welcome Page
+
+*** Keywords ***
