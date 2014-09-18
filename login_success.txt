@@ -5,7 +5,7 @@ Library    Selenium2Library
 ${LOGIN URL}    http://localhost:7272/html
 
 *** Testcases ***
-Login success
+Login success naja
 	Open Browser    ${LOGIN URL}
 	Input Text      username_field    demo
 	Input Text      password_field    mode
